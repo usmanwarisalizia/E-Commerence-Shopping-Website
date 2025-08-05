@@ -1,122 +1,127 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* @import url('https://fonts.cdnfonts.com/css/helvetica-neue-200'); */
 /* @import url('https://fonts.cdnfonts.com/css/exacta'); */
 /* @import url(https://db.onlinewebfonts.com/c/2573ee4fcca31e48b54cec0a4305e2db?family=Acta+Headline+W00+Medium); */
 @import url("https://db.onlinewebfonts.com/c/af1649d93664349caf73c9f167f0f13e?family=Acta+Headline+W00+Light");
-@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
-@import url('https://db.onlinewebfonts.com/c/e5f78b4fb90a80a32be156470cbfead1?family=Avenir+LT+Pro+35+Bold');
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-55");
+@import url("https://db.onlinewebfonts.com/c/e5f78b4fb90a80a32be156470cbfead1?family=Avenir+LT+Pro+35+Bold");
 @import url("https://db.onlinewebfonts.com/c/0b51833ff62e4af8acb5fd3e2bf59e97?family=Avenir+Next+LT+Pro+Light");
 @import url("https://db.onlinewebfonts.com/c/e8c6a63541de0a4211a9358cbe74690f?family=Futura+Medium");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* SF Font Family */
 @import url(https://db.onlinewebfonts.com/c/4b57277e89dfdd30c9a6b69acaf78d3a?family=SF+Pro);
 
 @font-face {
-    font-family: "Avenir LT Pro 35 Light";
-    src: url("https://db.onlinewebfonts.com/c/e5f78b4fb90a80a32be156470cbfead1?family=Avenir+LT+Pro+35+Light") format("woff2");
+  font-family: "Avenir LT Pro 35 Light";
+  src: url("https://db.onlinewebfonts.com/c/e5f78b4fb90a80a32be156470cbfead1?family=Avenir+LT+Pro+35+Light")
+    format("woff2");
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 
 html,
 body {
-    font-size: .8125rem;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+  font-size: 0.8125rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
 }
 
 ::-webkit-scrollbar {
-    width: 8px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #E5E3DE;
+  background: #e5e3de;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(#e62e2d, #dc3545);
-    border-radius: 4px;
+  background: linear-gradient(#e62e2d, #dc3545);
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    color: #e62e2d;
+  color: #e62e2d;
 }
 
 @keyframes shimmer {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 
-    20% {
-        opacity: 0.8;
-    }
+  20% {
+    opacity: 0.8;
+  }
 
-    100% {
-        transform: translateX(200%);
-        opacity: 0;
-    }
+  100% {
+    transform: translateX(200%);
+    opacity: 0;
+  }
 }
 
 @keyframes shine {
-    0% {
-        transform: translateX(-30px) scaleX(0.5);
-        opacity: 0;
-    }
+  0% {
+    transform: translateX(-30px) scaleX(0.5);
+    opacity: 0;
+  }
 
-    30% {
-        opacity: 1;
-    }
+  30% {
+    opacity: 1;
+  }
 
-    100% {
-        transform: translateX(150px) scaleX(1.5);
-        opacity: 0;
-    }
+  100% {
+    transform: translateX(150px) scaleX(1.5);
+    opacity: 0;
+  }
 }
 
 @font-face {
-    font-family: 'Helvetica Neue';
-    src: url('https://db.onlinewebfonts.com/c/e1f3f209067d6b2670c9a5a101bb9a0a?family=Helvetica+Neue+W01+55+Roman') format('woff2');
-    font-weight: normal;
-    /* or 400 */
-    font-style: normal;
-    font-display: swap;
+  font-family: "Helvetica Neue";
+  src: url("https://db.onlinewebfonts.com/c/e1f3f209067d6b2670c9a5a101bb9a0a?family=Helvetica+Neue+W01+55+Roman")
+    format("woff2");
+  font-weight: normal;
+  /* or 400 */
+  font-style: normal;
+  font-display: swap;
 }
 
 /* @font-face {
@@ -128,29 +133,28 @@ body {
 } */
 
 .regular-text {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    font-weight: normal;
-    /* or 400 - ensures the regular weight is used */
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  /* or 400 - ensures the regular weight is used */
 }
-
 
 /* Custom scrollbar styling */
 ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+  width: 4px;
+  height: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
-    border-radius: 10px;
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #ff8a00, #e52e71);
-    border-radius: 10px;
-    transition: all 0.3s ease;
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(45deg, #e52e71, #ff8a00);
+  background: linear-gradient(45deg, #e52e71, #ff8a00);
 }
