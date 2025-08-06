@@ -408,14 +408,19 @@ const Carts = () => {
             <Typography
               variant="body1"
               sx={{
-                lineHeight: { xs: "1.5", sm: "1.8" },
+                lineHeight: { xs: "1.5", sm: "1.6" },
                 fontWeight: 400,
-                fontSize: { xs: "12px", sm: "11px" },
-                letterSpacing: "-.1px",
+                fontSize: { xs: "12px", sm: "12.2px" },
+                // letterSpacing: "-.1px",
                 marginTop: "5px",
                 marginBottom: "5px",
                 // letterSpacing: "0.5px",
-                color: "#000000e3",
+                // color: "#000000e3",
+
+                letterSpacing: "0.4px",
+                // fontSize: "12.2px",
+                // lineHeight: 1.7,
+                color: "rgba(0, 0, 0, 0.8)",
               }}
             >
               {singleProduct.description}
@@ -443,7 +448,7 @@ const Carts = () => {
                 variant="body1"
                 sx={{
                   fontWeight: 700,
-                  fontSize: "12px",
+                  fontSize: "13px",
                   lineHeight: "19.5px",
                   color: "#000000",
                   width: { xs: "100%", sm: "65px" },
@@ -668,34 +673,55 @@ const Carts = () => {
               {
                 text: "PRODUCT DETAILS & COMPOSITION",
                 icon: (
-                  <InfoOutlinedIcon
-                    sx={{
-                      fontSize: "12px",
-                      color: theme.palette.text.secondary,
-                    }}
-                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 3 4"
+                    fill="none"
+                    style={{ transform: "rotate(90deg)" }}
+                  >
+                    <path
+                      d="M0.855 3.64473L2.15 2.34973C2.345 2.15473 2.345 1.83973 2.15 1.64473L0.855 0.34973C0.54 0.0347304 0 0.259731 0 0.70473L0 3.29473C0 3.73973 0.54 3.95973 0.855 3.64473Z"
+                      fill="black"
+                    />
+                  </svg>
                 ),
               },
               {
                 text: "DELIVERIES & RETURNS",
                 icon: (
-                  <LocalShippingOutlinedIcon
-                    sx={{
-                      fontSize: "12px",
-                      color: theme.palette.text.secondary,
-                    }}
-                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 3 4"
+                    fill="none"
+                    style={{ transform: "rotate(90deg)" }}
+                  >
+                    <path
+                      d="M0.855 3.64473L2.15 2.34973C2.345 2.15473 2.345 1.83973 2.15 1.64473L0.855 0.34973C0.54 0.0347304 0 0.259731 0 0.70473L0 3.29473C0 3.73973 0.54 3.95973 0.855 3.64473Z"
+                      fill="black"
+                    />
+                  </svg>
                 ),
               },
               {
                 text: "SPECIAL RETURN CONDITIONS*",
                 icon: (
-                  <AssignmentReturnOutlinedIcon
-                    sx={{
-                      fontSize: "12px",
-                      color: theme.palette.text.secondary,
-                    }}
-                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="10"
+                    height="10"
+                    viewBox="0 0 3 4"
+                    fill="none"
+                    style={{ transform: "rotate(90deg)" }}
+                  >
+                    <path
+                      d="M0.855 3.64473L2.15 2.34973C2.345 2.15473 2.345 1.83973 2.15 1.64473L0.855 0.34973C0.54 0.0347304 0 0.259731 0 0.70473L0 3.29473C0 3.73973 0.54 3.95973 0.855 3.64473Z"
+                      fill="black"
+                    />
+                  </svg>
                 ),
               },
             ].map((item) => (
@@ -711,9 +737,11 @@ const Carts = () => {
                   transition: "all 0.2s ease",
                   "&:hover": {
                     "& .MuiTypography-root": { textDecoration: "underline" },
-                    "& .MuiSvgIcon-root": {
-                      transform: "translateX(3px)",
-                      color: theme.palette.text.primary,
+                    "& svg": {
+                      transform: "translateX(3px) rotate(90deg)",
+                      "& path": {
+                        fill: theme.palette.text.primary,
+                      },
                     },
                   },
                 }}
@@ -722,7 +750,7 @@ const Carts = () => {
                   variant="body1"
                   sx={{
                     fontWeight: 400,
-                    fontSize: { xs: "13px", sm: "12px" },
+                    fontSize: { xs: "13px", sm: "11.5px" },
                     color: theme.palette.text.primary,
                     letterSpacing: "0.3px",
                   }}
@@ -734,10 +762,9 @@ const Carts = () => {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    width: "24px",
-                    height: "24px",
+                    width: "10px",
+                    height: "10px",
                     borderRadius: "50%",
-                    backgroundColor: "rgba(0,0,0,0.04)",
                     transition: "all 0.2s ease",
                   }}
                 >
