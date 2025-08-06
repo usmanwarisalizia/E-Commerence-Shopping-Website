@@ -3,7 +3,7 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
   typography: {
     fontFamily: [
-      '"SF Pro"',
+      '"SF Pro", sans-serif',
     ].join(','),
   },
   palette: {

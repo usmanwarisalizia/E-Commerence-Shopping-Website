@@ -139,6 +139,7 @@ body {
 }
 
 /* Custom scrollbar styling */
+/* Global Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 4px;
   height: 12px;

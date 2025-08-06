@@ -24,17 +24,14 @@ import { singleProduct } from "../../productsAssets";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import AssignmentReturnOutlinedIcon from "@mui/icons-material/AssignmentReturnOutlined";
+import { scale } from "framer-motion";
 
 const ProductImage = styled("img")(({ theme }) => ({
   width: "100%",
   height: "100%",
   cursor: "pointer",
-  transition: "transform 0.3s ease",
   objectFit: "contain",
   aspectRatio: "2 / 3",
-  "&:hover": {
-    transform: "scale(1.02)",
-  },
 }));
 
 const StyledSwiper = styled(Swiper)(({ theme }) => ({
@@ -56,7 +53,11 @@ const Carts = () => {
   );
   const modalSwiperRef = useRef(null);
 
-  const images = [Desigensno1, Desigensno1, Desigensno1];
+  const images = [
+    "https://outfitters.com.pk/cdn/shop/files/F0877103001_2.jpg?v=1753686607",
+    "https://outfitters.com.pk/cdn/shop/files/F0877103001_1.jpg?v=1753686230",
+    "https://outfitters.com.pk/cdn/shop/files/F0877103001_3.jpg?v=1753686230",
+  ];
 
   const detailsContent = {
     "PRODUCT DETAILS & COMPOSITION": (
@@ -265,65 +266,75 @@ const Carts = () => {
               sx={{
                 flex: 1,
                 borderRadius: "8px",
-                overflow: "hidden",
+                // overflow: "hidden",
                 height: isMobile ? "400px" : "600px",
                 display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                backgroundColor: "#ffffff",
-              }}
-            >
-              <ProductImage
-                src={images[currentImage]}
-                alt={`Main Product View`}
-                onClick={() => setOpenImageModal(true)}
-              />
-            </Box>
-
-            <Box
-              sx={{
-                width: "80px",
-                maxHeight: isMobile ? "400px" : "600px",
-                overflowY: "auto",
-                display: "flex",
                 flexDirection: "column",
-                gap: 1,
-                pr: "4px",
-                scrollbarWidth: "thin",
-                "&::-webkit-scrollbar": { width: "6px" },
+                backgroundColor: "#ffffff",
+                overflowY: "scroll",
+                scrollBehavior: "smooth",
+                "&::-webkit-scrollbar": {
+                  width: "1px",
+                  left: "auto",
+                  right: "0px",
+                  top: "0px",
+                },
+                "&::-webkit-scrollbar-track": {
+                  background: "#f1f1f1",
+                },
                 "&::-webkit-scrollbar-thumb": {
-                  backgroundColor: "#ccc",
-                  borderRadius: "10px",
+                  background: "#888",
+                  borderRadius: "3px",
+                },
+                "&::-webkit-scrollbar-thumb:hover": {
+                  background: "#555",
                 },
               }}
             >
-              {images.map((img, index) => (
-                <Box
-                  key={index}
-                  sx={{
-                    border:
-                      currentImage === index
-                        ? "2px solid #eb0c34"
-                        : "2px solid transparent",
-                    borderRadius: "4px",
-                    cursor: "pointer",
-                    overflow: "hidden",
-                    transition: "border 0.3s",
-                    "&:hover": { border: "2px solid #eb0c34" },
+              {/* First Image */}
+              <Box sx={{ width: "100%", height: "700px" }}>
+                <ProductImage
+                  src={images[0]}
+                  alt="Product View 1"
+                  style={{
+                    width: "100%",
+                    height: "700px",
+                    objectFit: "contain",
+                    aspectRatio: "2/3",
                   }}
-                  onClick={() => setCurrentImage(index)}
-                >
-                  <img
-                    src={img}
-                    alt={`Thumbnail ${index + 1}`}
-                    style={{
-                      width: "100%",
-                      height: "80px",
-                      objectFit: "cover",
-                    }}
-                  />
-                </Box>
-              ))}
+                  onClick={() => setOpenImageModal(true)}
+                />
+              </Box>
+
+              {/* Second Image */}
+              <Box sx={{ width: "100%", height: "100%" }}>
+                <ProductImage
+                  src={images[1]} // Second image
+                  alt="Product View 2"
+                  style={{
+                    width: "100%",
+                    height: "700px",
+                    objectFit: "contain",
+                    aspectRatio: "2/3",
+                  }}
+                  onClick={() => setOpenImageModal(true)}
+                />
+              </Box>
+
+              {/* Third Image */}
+              <Box sx={{ width: "100%", height: "100%" }}>
+                <ProductImage
+                  src={images[2]}
+                  alt="Product View 3"
+                  style={{
+                    width: "100%",
+                    height: "700px",
+                    objectFit: "contain",
+                    aspectRatio: "2/3",
+                  }}
+                  onClick={() => setOpenImageModal(true)}
+                />
+              </Box>
             </Box>
           </Box>
         </Grid>
@@ -384,11 +395,11 @@ const Carts = () => {
                 fontWeight: 600,
                 paddingTop: "6px",
                 paddingBottom: "4px",
-
+                fontStyle: "normal",
                 lineHeight: 1.5,
                 fontSize: { xs: "16px", sm: "13px !important" },
                 color: "#000000e0",
-                letterSpacing: "0.7px",
+                letterSpacing: "-0.3px",
               }}
             >
               Description{" "}
@@ -399,11 +410,11 @@ const Carts = () => {
               sx={{
                 lineHeight: { xs: "1.5", sm: "1.8" },
                 fontWeight: 400,
-                fontSize: { xs: "12px", sm: "12px" },
+                fontSize: { xs: "12px", sm: "11px" },
                 letterSpacing: "-.1px",
                 marginTop: "5px",
                 marginBottom: "5px",
-                letterSpacing: "0.5px",
+                // letterSpacing: "0.5px",
                 color: "#000000e3",
               }}
             >
@@ -652,14 +663,14 @@ const Carts = () => {
             Add To Basket
           </Button>
 
-          <Box sx={{ mb: 3, borderTop: "1px solid #f0f0f0", pt: 2 }}>
+          <Box>
             {[
               {
                 text: "PRODUCT DETAILS & COMPOSITION",
                 icon: (
                   <InfoOutlinedIcon
                     sx={{
-                      fontSize: "14px",
+                      fontSize: "12px",
                       color: theme.palette.text.secondary,
                     }}
                   />
@@ -670,7 +681,7 @@ const Carts = () => {
                 icon: (
                   <LocalShippingOutlinedIcon
                     sx={{
-                      fontSize: "14px",
+                      fontSize: "12px",
                       color: theme.palette.text.secondary,
                     }}
                   />
@@ -681,7 +692,7 @@ const Carts = () => {
                 icon: (
                   <AssignmentReturnOutlinedIcon
                     sx={{
-                      fontSize: "14px",
+                      fontSize: "12px",
                       color: theme.palette.text.secondary,
                     }}
                   />
@@ -711,7 +722,7 @@ const Carts = () => {
                   variant="body1"
                   sx={{
                     fontWeight: 400,
-                    fontSize: { xs: "13px", sm: "14px" },
+                    fontSize: { xs: "13px", sm: "12px" },
                     color: theme.palette.text.primary,
                     letterSpacing: "0.3px",
                   }}
