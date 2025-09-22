@@ -1,1 +1,1 @@
-! [image alt] (https://github.com/usmanwarisalizia/E-Commerence-Shopping-Website/blob/18f6914922cbda20e95abaf77b3a5e0916e71eb7/E-commerece.png)
+![image alt] (https://github.com/usmanwarisalizia/E-Commerence-Shopping-Website/blob/c94427263e4b2a65c20b0b8f3421812a5162359e/E-commerece.png)
